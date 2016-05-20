@@ -29,7 +29,7 @@ gulp.task('sass:watch', ['sass'], () => {
 
 //JS
 gulp.task('js', () => {
-	return browserify('./src/js/main.js')
+	return browserify('./src/js/app.js')
 		.transform("babelify", {presets: ["es2015", "react"]})
 		.bundle()
 		.pipe(source('bundle.js'))
