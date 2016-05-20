@@ -4,7 +4,7 @@ let ReactDOM = require('react-dom');
 let Main = React.createClass({
 	render() {
 		return (
-			<div>Working</div>
+			<div>React is Working (because you see this) - If the background is grey, SASS is working too.</div>
 		);
 	}
 });

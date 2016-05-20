@@ -41,6 +41,23 @@ gulp.task('js:watch', ['js'], () => {
 	gulp.watch('./src/js/**/*.js', ['js']);
 });
 
+/***** UNCOMMENT THIS BLOCK IF YOU LIKE TO NAME YOUR FILES .JSX *****/
+/***** MAKE SURE YOU COMMENT OUT THE 'gulp.task('js') and gulp.task(js:watch) above ***/
+
+//	gulp.task('js', () => {
+// 	return browserify('./src/js/app.jsx')
+// 		.transform("babelify", {presets: ["es2015", "react"]})
+// 		.bundle()
+// 		.pipe(source('bundle.js'))
+// 		.pipe(gulp.dest('./dist/js'))
+// 		.pipe(connect.reload());
+// });
+
+//	gulp.task('js:watch', ['js'], () => {
+//		gulp.watch('./src/js/**/*.jsx', ['js']);
+//	});
+
+
 //LIVE RELOAD
 gulp.task('connect', () => {
 	connect.server({
